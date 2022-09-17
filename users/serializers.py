@@ -1,3 +1,5 @@
+from .models import Profile
+
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
@@ -49,3 +51,9 @@ class LoginSerializer(serializers.Serializer):
             token = Token.objects.get(user=user)
             return token
         raise serializers.ValidationError({"error": "Unable to log in with provided credentials."})
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = ("nickname", "position", "subjects", "image")
