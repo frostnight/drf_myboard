@@ -5,9 +5,17 @@
     "email": "test1@test.com"
 }
 
+
 {
     "username": "testuser2",
     "password": "dkssud!!",
     "password2": "dkssud!!",
     "email": "test2@test.com"
+}
+
+localhost:8000/users/profile/5
+{
+    "nickname": "FrostNight",
+    "position": "백엔드",
+    "subjects": "Django, Flutter, React"
 }

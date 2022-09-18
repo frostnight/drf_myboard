@@ -1,4 +1,4 @@
-from profile import Profile
+from .models import Profile
 
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib import admin
@@ -12,7 +12,7 @@ class ProfileInLine(admin.StackedInline):
 
 
 class UserAdmin(BaseUserAdmin):
-    inlines = (ProfileInLine)
+    inlines = (ProfileInLine, )
 
 
 admin.site.unregister(User)
